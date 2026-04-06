@@ -1,0 +1,15 @@
+.cart-list {
+  width: 70%;
+}
+.cart-list-header {
+  padding: 10px 30px;
+  border-bottom: 2px solid #ccc;
+  border-width: 100px;
+  font-size: 20px;
+}
+.cart-list-header span:first-child {
+  margin-right: 330px;
+}
+.cart-list-header span:nth-child(2) {
+  margin-right: 90px;
+}

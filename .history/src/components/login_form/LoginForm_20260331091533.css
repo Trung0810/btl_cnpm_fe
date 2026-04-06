@@ -1,0 +1,35 @@
+.login-form {
+  width: 500px;
+  padding: 50px;
+  margin: 50px auto;
+  box-shadow: 0 0 5px 5px #ccc;
+}
+.login-form-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #20e3b4;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.login-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.login-form-error {
+  font-weight: 500;
+  color: #de4242;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+.login-form-radio {
+  margin-bottom: 20px;
+}
+.login-form-button {
+  width: 100%;
+  background-color: #20e3b4;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 30px;
+}

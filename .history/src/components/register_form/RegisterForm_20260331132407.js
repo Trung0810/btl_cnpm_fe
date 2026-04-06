@@ -1,0 +1,38 @@
+import React from "react";
+
+const RegisterForm = () => {
+  return (
+    <form className="register-form">
+      <h2 className="register-title">Register Form</h2>
+      <div className="register-account">
+        <h3>Account</h3>
+        <div className="register-form-wrapper">
+          <label htmlFor="username"></label>
+          <input type="text" name="username" id="username" />
+        </div>
+        <div className="register-form-wrapper">
+          <label htmlFor="password"></label>
+          <input type="text" name="password" id="password" />
+        </div>
+      </div>
+      <div className="register-infor">
+        <h3>Customer Information</h3>
+        <div className="register-form-wrapper">
+          <label htmlFor="fullname"></label>
+          <input type="text" name="fullname" id="fullname" />
+        </div>
+        <div className="register-form-wrapper">
+          <label htmlFor="gender"></label>
+          <select name="gender" id="gender">
+            <option value="">-- Select your gender --</option>
+            <option value="Male"></option>
+            <option value="Female"></option>
+            <option value="Other"></option>
+          </select>
+        </div>
+      </div>
+    </form>
+  );
+};
+
+export default RegisterForm;

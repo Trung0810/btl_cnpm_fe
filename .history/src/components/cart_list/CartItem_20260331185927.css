@@ -1,0 +1,29 @@
+.cart-item {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+.cart-item-wrapper {
+  width: 100px;
+  height: 100px;
+}
+.cart-item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.cart-item-infor {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.cart-item-infor p {
+  font-size: 18px;
+  font-weight: 500;
+}
+.cart-item-infor p:not(:first-child) {
+  color: #747474;
+}

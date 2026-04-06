@@ -1,0 +1,46 @@
+.register-form {
+  width: 700px;
+  padding: 50px;
+  margin: 50px auto;
+  box-shadow: 0 0 5px 5px #ccc;
+  user-select: none;
+}
+.register-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #20e3b4;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.register-account {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-bottom: 20px;
+}
+.register-account h3 {
+  font-size: 32px;
+  font-weight: 500;
+}
+.register-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.register-wrapper label {
+  font-size: 18px;
+  font-weight: 500;
+}
+.register-wrapper input {
+  width: 100%;
+}
+.register-infor {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-bottom: 20px;
+}
+.register-infor h3 {
+  font-size: 32px;
+  font-weight: 500;
+}

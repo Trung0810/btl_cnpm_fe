@@ -1,0 +1,14 @@
+.cart-layout {
+  width: 80%;
+  margin: 150px auto;
+  display: flex;
+  column-gap: 100px;
+  position: relative;
+}
+.cart-title {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  font-size: 32px;
+  font-weight: bold;
+}

@@ -1,0 +1,53 @@
+.banner {
+  width: 100%;
+  height: 500px;
+  margin: 100px auto;
+  position: relative;
+}
+.banner-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.banner-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.banner-area {
+  width: 60%;
+  height: 80%;
+  background-color: #fff;
+  border-radius: 8px;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  display: flex;
+}
+.banner-wrapper {
+  width: 50%;
+  height: 100%;
+}
+.banner-title {
+  font-size: 56px;
+  font-weight: bold;
+  color: #20e3b4;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+.banner-button {
+  background-color: #20e3b4;
+  color: #fff;
+  position: absolute;
+  top: 70%;
+  left: 5%;
+}
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}

@@ -1,0 +1,12 @@
+.banner {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+.over-lay {
+}
+.banner-image {
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+}

@@ -1,0 +1,11 @@
+.order {
+  width: 30%;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.order-title {
+  font-size: 32px;
+  font-weight: 500;
+  padding: 10px 0;
+}

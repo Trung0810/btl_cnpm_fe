@@ -1,0 +1,7 @@
+.cart-item {
+  width: 100%;
+  display: flex;
+  column-gap: 30px;
+}
+.cart-item-wrapper {
+}

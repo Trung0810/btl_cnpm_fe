@@ -1,0 +1,9 @@
+.cart-layout {
+  width: 80%;
+  margin: 100px auto;
+  display: flex;
+  column-gap: 100px;
+}
+.cart-title {
+  display: block;
+}

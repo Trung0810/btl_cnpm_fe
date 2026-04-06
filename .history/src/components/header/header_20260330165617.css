@@ -1,0 +1,10 @@
+.header {
+  width: 80%;
+  height: 100px;
+  padding: 20px 50px;
+  display: flex;
+}
+.logo {
+  font-size: 30px;
+  color: #e72727;
+}

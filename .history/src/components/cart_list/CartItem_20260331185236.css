@@ -1,0 +1,4 @@
+.cart-item {
+  display: flex;
+  column-gap: 30px;
+}
