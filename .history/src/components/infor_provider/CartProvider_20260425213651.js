@@ -1,0 +1,27 @@
+import axios, { AxiosHeaders } from "axios";
+import React, { createContext, useState } from "react";
+
+const CartContext = createContext();
+
+const CartProvider = (props) => {
+  const [cart, setCart] = useState(null);
+
+  const handleAddToCart = async (data) => {
+    try {
+      const response = await axios.post(
+        "http://localhost:8888/v1/api/carts",
+        data,
+        { headers: { Authorization: `Bearer ${token}` } },
+      );
+    } catch (error) {}
+  };
+
+  return (
+    <CartContext.Provider
+      value={{ cart, setCart }}
+      {...props}
+    ></CartContext.Provider>
+  );
+};
+
+export { CartContext, CartProvider };

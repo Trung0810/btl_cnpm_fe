@@ -1,0 +1,28 @@
+.admin-sidebar {
+  width: 15%;
+  height: 100%;
+  background-color: #333333;
+  color: #fff;
+  padding: 30px 0;
+}
+.admin-sidebar-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.admin-sidebar-item {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+.admin-sidebar-item:hover {
+  background-color: #888888;
+}
+.admin-sidebar-item:last-child {
+  color: red;
+}

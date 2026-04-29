@@ -1,0 +1,14 @@
+import React, { Fragment } from "react";
+import ShoesInfor from "../shoes_infor/ShoesInfor";
+import BackHome from "../back_home/BackHome";
+
+const DetailPage = () => {
+  return (
+    <Fragment>
+      <BackHome></BackHome>
+      <ShoesInfor></ShoesInfor>
+    </Fragment>
+  );
+};
+
+export default DetailPage;

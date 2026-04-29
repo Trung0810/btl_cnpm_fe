@@ -1,0 +1,7 @@
+.cart-layout {
+  width: 90%;
+  margin: 200px auto;
+  display: flex;
+  column-gap: 50px;
+  position: relative;
+}

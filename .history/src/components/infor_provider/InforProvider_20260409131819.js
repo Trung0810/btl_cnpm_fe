@@ -1,0 +1,16 @@
+import React, { createContext } from "react";
+
+const InforProvider = () => {
+  const InforContext = createContext();
+
+  const [user, setUser] = useState(null);
+
+  return (
+    <InforContext.Provider
+      value={{ user, setUser }}
+      {...props}
+    ></InforContext.Provider>
+  );
+};
+
+export default InforProvider;

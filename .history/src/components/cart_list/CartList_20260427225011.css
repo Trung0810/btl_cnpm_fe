@@ -1,0 +1,27 @@
+.cart-list {
+  width: 80%;
+}
+.cart-list-title {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.cart-list-header {
+  font-size: 20px;
+  padding: 10px 30px;
+
+  border: 2px solid #ccc;
+}
+.cart-list-header span:first-child {
+  margin-right: 565px;
+}
+.cart-list-header span:nth-child(2) {
+  margin-right: 90px;
+}
+.cart-list-item {
+  max-height: 377px;
+  overflow-y: scroll;
+}
+.cart-list-item::-webkit-scrollbar {
+  display: none;
+}

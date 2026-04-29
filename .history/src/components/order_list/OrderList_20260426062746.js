@@ -1,0 +1,98 @@
+import React from "react";
+
+const OrderList = () => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [selectedId, setSelectedId] = useState(null);
+  const [showPopup, setShowPopup] = useState(false);
+  const [title, setTitle] = useState(null);
+  const [description, setDescription] = useState(null);
+  const navigate = useNavigate();
+
+  const token = localStorage.getItem("accessToken");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const response = await axios.get(
+          "http://localhost:8888/v1/api/orders",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          },
+        );
+        console.log("🚀 ~ fetchData ~ response:", response);
+
+        setData(response.data.data);
+      } catch (error) {
+        console.log("🚀 ~ fetchData ~ error:", error);
+      } finally {
+        setTimeout(() => {
+          setLoading(false);
+        }, 500);
+      }
+    };
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      <table className="admin-order-table">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Customer Name</th>
+            <th>Product List</th>
+            <th>Order Date</th>
+            <th>Update Date</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data &&
+            data.length > 0 &&
+            data.map((item) => (
+              <tr key={item._id}>
+                <td>{item._id}</td>
+                <td>{standardization(item.customerName)}</td>
+                <td>
+                  {item.items.map((element) => (
+                    <div key={element.shoesId} className="admin-order-list">
+                      <p>{element.name}</p>
+                      <p>Quantity: {element.quantity}</p>
+                    </div>
+                  ))}
+                </td>
+                <td>{convertTime(item.createdAt)}</td>
+                <td>{convertTime(item.updatedAt)}</td>
+                <td>{item.total}</td>
+                <td>
+                  <div>
+                    <button
+                      className="admin-update"
+                      onClick={() =>
+                        navigate(`/admin/update-order/${item._id}`)
+                      }
+                    >
+                      Update
+                    </button>
+                    <button
+                      className="admin-delete"
+                      onClick={() => handleShow(item._id)}
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default OrderList;

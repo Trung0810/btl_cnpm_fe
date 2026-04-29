@@ -1,0 +1,61 @@
+.register-form {
+  width: 700px;
+  padding: 80px 50px 50px;
+  margin: 80px auto;
+  box-shadow: 0 0 5px 5px #ccc;
+  user-select: none;
+}
+.register-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #20e3b4;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.register-account {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-bottom: 20px;
+}
+.register-form h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #20e3b4;
+}
+.register-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.register-wrapper label {
+  font-size: 18px;
+  font-weight: 500;
+}
+.register-wrapper input {
+  width: 100%;
+}
+.register-error {
+  color: #dc3545;
+  margin-top: -5px;
+}
+.register-form .register-infor {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-bottom: 20px;
+}
+.register-wrapper select {
+  -webkit-appearance: none;
+}
+.register-agree {
+  display: flex;
+  margin-top: -20px;
+  cursor: pointer;
+}
+.register-button {
+  width: 100%;
+  background-color: #20e3b4;
+  color: #fff;
+  margin-top: 30px;
+}

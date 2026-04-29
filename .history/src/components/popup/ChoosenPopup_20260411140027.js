@@ -1,0 +1,22 @@
+import React from "react";
+import Overlay from "../overlay/Overlay";
+import "./ChoosenPopup.css";
+
+const ChoosenPopup = ({ title, description }) => {
+  return (
+    <div className="choosen-popup">
+      <Overlay></Overlay>
+      <div className="image-wrapper">
+        <img src="/delete.png" alt="#" />
+      </div>
+      <h2 className="choosen-title">{title}</h2>
+      <p className="choosen-description">This action cannot be undone</p>
+      <div className="choosen-popup-wrapper">
+        <button className="choosen-button-cancel">Cancel</button>
+        <button className="choosen-button-delete">Delete</button>
+      </div>
+    </div>
+  );
+};
+
+export default ChoosenPopup;

@@ -1,0 +1,63 @@
+import React from "react";
+import "./AdminUpdateOrder.css";
+
+const AdminUpdateOrder = () => {
+  return (
+    <div className="admin-update-order">
+      <h2 className="admin-update-title">Update Order</h2>
+      <form>
+        <div className="admin-update-wrapper">
+          <label htmlFor="id">Order ID:</label>
+          <input type="text" name="id" id="id" />
+        </div>
+        <div className="admin-update-wrapper">
+          <label htmlFor="customerName">Customer ID:</label>
+          <input type="text" name="customerName" id="customerName" />
+        </div>
+        <div className="admin-update-table">
+          <label>Order Item Lists:</label>
+          <table>
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input type="text" name="name" />
+                </td>
+                <td>
+                  <input type="number" name="quantity" />
+                </td>
+                <td>
+                  <button>Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" name="id" />
+                </td>
+                <td>
+                  <input type="number" name="quantity" />
+                </td>
+                <td>
+                  <button>Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button>Add new Product</button>
+        </div>
+        <div className="admin-update-wrapper">
+          <button>Update</button>
+          <button>Cancel</button>
+        </div>
+      </form>
+    </div>
+  );
+};
+
+export default AdminUpdateOrder;
