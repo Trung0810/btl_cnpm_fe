@@ -40,8 +40,8 @@ const OrderList = () => {
   if (loading) {
     return (
       <div className="order-list">
-        <div className="loading"></div>
         <h2 className="order-list-title">Order List:</h2>{" "}
+        <div className="loading"></div>
       </div>
     );
   }
@@ -49,36 +49,38 @@ const OrderList = () => {
   return (
     <div className="order-list">
       <h2 className="order-list-title">Order List:</h2>
-      <table className="order-list-table">
-        <thead>
-          <tr>
-            <th>Order ID</th>
-            <th>Product List</th>
-            <th>Order Date</th>
-            <th>Update Date</th>
-            <th>Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data &&
-            data.length > 0 &&
-            data.map((item) => (
-              <tr key={item._id}>
-                <td>{item._id}</td>
-                <td>
-                  {item.items.map((element) => (
-                    <div key={element.shoesId} className="order-list-items">
-                      <p>{`${element.name} (${element.quantity})`}</p>
-                    </div>
-                  ))}
-                </td>
-                <td>{convertTime(item.createdAt)}</td>
-                <td>{convertTime(item.updatedAt)}</td>
-                <td>{item.total}</td>
-              </tr>
-            ))}
-        </tbody>
-      </table>
+      <div className="order-list-table-wrapper">
+        <table className="order-list-table">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Product List</th>
+              <th>Order Date</th>
+              <th>Update Date</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data &&
+              data.length > 0 &&
+              data.map((item) => (
+                <tr key={item._id}>
+                  <td>{item._id}</td>
+                  <td>
+                    {item.items.map((element) => (
+                      <div key={element.shoesId} className="order-list-items">
+                        <p>{`${element.name} (${element.quantity})`}</p>
+                      </div>
+                    ))}
+                  </td>
+                  <td>{convertTime(item.createdAt)}</td>
+                  <td>{convertTime(item.updatedAt)}</td>
+                  <td>{item.total}</td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

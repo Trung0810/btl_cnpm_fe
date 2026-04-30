@@ -1,6 +1,6 @@
 .order-list {
   width: 90%;
-  margin: 100px auto;
+  margin: 30px auto;
   position: relative;
 }
 .order-list-title {
@@ -8,8 +8,20 @@
   font-weight: 500;
   margin-bottom: 30px;
 }
+.order-list-table-wrapper {
+  max-height: 490px;
+  overflow-y: scroll;
+}
+.order-list-table-wrapper::-webkit-scrollbar {
+  display: none;
+}
 .order-list-table {
   width: 100%;
+}
+.order-list-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 .order-list-table th,
 .order-list-table td {
