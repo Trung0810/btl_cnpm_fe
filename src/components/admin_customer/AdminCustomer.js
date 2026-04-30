@@ -21,14 +21,11 @@ const AdminCustomer = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(
-          "http://localhost:8888/v1/api/customers",
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
+        const response = await axios.get("http://localhost:8888/v1/api/users", {
+          headers: {
+            Authorization: `Bearer ${token}`,
           },
-        );
+        });
         console.log("🚀 ~ fetchData ~ response:", response);
 
         setData(response.data.data);
@@ -54,7 +51,7 @@ const AdminCustomer = () => {
     try {
       setLoading(true);
       const response = await axios.delete(
-        `http://localhost:8888/v1/api/customers/${selectedId}`,
+        `http://localhost:8888/v1/api/users/${selectedId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import sumId from "../helper_function/SumId";
+import standardization from "../helper_function/Standardization";
 import "./ShoesInfor.css";
 
 const ShoesInfor = () => {
@@ -48,7 +49,7 @@ const ShoesInfor = () => {
               <b>Price:</b> {data.price}d
             </p>
             <p>
-              <b>Brand:</b> {data.brand}
+              <b>Brand:</b> {standardization(data.brand)}
             </p>
             <p>
               <b>Description:</b> {data.description}

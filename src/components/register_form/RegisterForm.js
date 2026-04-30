@@ -63,7 +63,7 @@ const RegisterForm = () => {
   const onSubmit = async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:8888/v1/api/customers",
+        "http://localhost:8888/v1/api/users",
         data,
       );
       console.log("🚀 ~ onSubmit ~ response:", response);

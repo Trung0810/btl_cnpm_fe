@@ -64,7 +64,7 @@ const AdminUpdateCustomer = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          `http://localhost:8888/v1/api/customers/${id}`,
+          `http://localhost:8888/v1/api/users/${id}`,
         );
         console.log("🚀 ~ fetchData ~ response:", response);
 
@@ -94,7 +94,7 @@ const AdminUpdateCustomer = () => {
     try {
       setLoading(true);
       const response = await axios.put(
-        `http://localhost:8888/v1/api/customers/${id}`,
+        `http://localhost:8888/v1/api/users/${id}`,
         data,
         {
           headers: {
