@@ -16,6 +16,7 @@ const Header = () => {
   const handleAction = () => {
     handleLogout();
     setShowPopup(false);
+    document.body.style.overflow = "unset";
   };
 
   const handleCancel = () => {
