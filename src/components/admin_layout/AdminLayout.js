@@ -11,17 +11,15 @@ import { Outlet } from "react-router-dom";
 import { InforContext } from "../infor_provider/InforProvider";
 
 const AdminLayout = () => {
+  const { admin } = useContext(InforContext);
+  if (!admin) {
+    return <div></div>;
+  }
+
   return (
     <div style={{ display: "flex" }}>
       <AdminSidebar></AdminSidebar>
       <Outlet></Outlet>
-      {/* <AdminProduct></AdminProduct> */}
-      {/* <AdminAddProduct></AdminAddProduct> */}
-      {/* <AdminUpdateProduct></AdminUpdateProduct> */}
-      {/* <AdminOrder></AdminOrder> */}
-      {/* <AdminUpdateOrder></AdminUpdateOrder> */}
-      {/* <AdminCustomer></AdminCustomer> */}
-      {/* <AdminUpdateCustomer></AdminUpdateCustomer> */}
     </div>
   );
 };

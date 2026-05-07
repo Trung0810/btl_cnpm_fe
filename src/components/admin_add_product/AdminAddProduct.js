@@ -55,10 +55,10 @@ const AdminAddProduct = () => {
       setTitle(response.data.message);
       setDescription("");
     } catch (error) {
-      console.log("🚀 ~ onSubmit ~ error:", error.response.data.message);
+      console.log("🚀 ~ onSubmit ~ error:", error.response.data);
       setStatus("failed");
       setTitle("Update shoes failed!");
-      setDescription(error.response.data.message);
+      setDescription(error.response.data.error);
     } finally {
       reset();
       setTimeout(() => {

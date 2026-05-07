@@ -48,7 +48,7 @@ const LoginForm = () => {
       } else {
         setAdmin(payload);
       }
-      localStorage.setItem("accessToken", response.data.data.accessToken);
+      localStorage.setItem("accessToken", response.data.data.token);
 
       setStatus("success");
       setTitle(response.data.message);

@@ -3,9 +3,9 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import axios from "axios";
-import "./RegisterForm.css";
 import NoficationPopup from "../popup/NoficationPopup";
 import { useNavigate } from "react-router-dom";
+import "./RegisterForm.css";
 
 const RegisterForm = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -63,7 +63,7 @@ const RegisterForm = () => {
   const onSubmit = async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:8888/v1/api/users",
+        "http://localhost:8888/v1/api/register",
         data,
       );
       console.log("🚀 ~ onSubmit ~ response:", response);
