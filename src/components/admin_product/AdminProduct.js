@@ -25,7 +25,7 @@ const AdminProduct = () => {
 
         setData(response.data.data);
       } catch (error) {
-        console.log("🚀 ~ fetchData ~ error:", error.response.data.message);
+        console.log("🚀 ~ fetchData ~ error:", error.response.data);
       } finally {
         setTimeout(() => {
           setLoading(false);
@@ -58,7 +58,7 @@ const AdminProduct = () => {
       const newData = [...data];
       setData(newData.filter((item) => item._id !== selectedId));
     } catch (error) {
-      console.log("🚀 ~ handleDelete ~ error:", error.response.data.message);
+      console.log("🚀 ~ handleDelete ~ error:", error.response.data);
     } finally {
       setTimeout(() => {
         setLoading(false);
@@ -162,7 +162,7 @@ const AdminProduct = () => {
         <ChoosenPopup
           title={title}
           description={description}
-          handleDelete={handleDelete}
+          handleAction={handleDelete}
           handleCancel={handleCancel}
         ></ChoosenPopup>
       )}

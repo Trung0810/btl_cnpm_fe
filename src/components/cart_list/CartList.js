@@ -24,7 +24,7 @@ const CartList = () => {
 
         setCart(response.data.data);
       } catch (error) {
-        console.log("🚀 ~ fetchData ~ error:", error.response.data.error);
+        console.log("🚀 ~ fetchData ~ error:", error.response.data);
       } finally {
         setTimeout(() => {
           setLoading(false);

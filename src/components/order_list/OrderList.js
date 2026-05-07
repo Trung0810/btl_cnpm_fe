@@ -27,7 +27,7 @@ const OrderList = () => {
 
         setData(response.data.data);
       } catch (error) {
-        console.log("🚀 ~ fetchData ~ error:", error);
+        console.log("🚀 ~ fetchData ~ error:", error.response.data);
       } finally {
         setTimeout(() => {
           setLoading(false);

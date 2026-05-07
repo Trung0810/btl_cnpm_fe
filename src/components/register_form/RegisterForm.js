@@ -72,7 +72,7 @@ const RegisterForm = () => {
       setDescription("Welcome to shoes store!");
       setShowPopup(true);
     } catch (error) {
-      console.log("🚀 ~ onSubmit ~ error:", error);
+      console.log("🚀 ~ onSubmit ~ error:", error.response.data);
       setStatus("failed");
       setTitle("Create account failed!");
       setDescription(error.response.data.error);

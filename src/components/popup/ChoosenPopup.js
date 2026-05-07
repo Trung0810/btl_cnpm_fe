@@ -2,7 +2,13 @@ import React from "react";
 import Overlay from "../overlay/Overlay";
 import "./ChoosenPopup.css";
 
-const ChoosenPopup = ({ title, description, handleDelete, handleCancel }) => {
+const ChoosenPopup = ({
+  title,
+  description,
+  handleAction,
+  handleCancel,
+  action,
+}) => {
   return (
     <div className="choosen-popup">
       <Overlay></Overlay>
@@ -12,10 +18,16 @@ const ChoosenPopup = ({ title, description, handleDelete, handleCancel }) => {
       <h2 className="choosen-title">{title}</h2>
       <p className="choosen-description">{description}</p>
       <div className="choosen-popup-wrapper">
-        <button className="choosen-button-delete" onClick={handleDelete}>
-          Delete
+        <button
+          className="choosen-button-delete"
+          onClick={() => handleAction()}
+        >
+          {action || "Delete"}
         </button>
-        <button className="choosen-button-cancel" onClick={handleCancel}>
+        <button
+          className="choosen-button-cancel"
+          onClick={() => handleCancel()}
+        >
           Cancel
         </button>
       </div>

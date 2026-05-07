@@ -83,7 +83,8 @@ const AdminUpdateOrder = () => {
           items: (orderData && orderData.items) || [],
         });
       } catch (error) {
-        console.log("🚀 ~ fetchData ~ error:", error.response.data.message);
+        console.log("🚀 ~ fetchData ~ error:", error.orderResponse.data);
+        console.log("🚀 ~ fetchData ~ error:", error.shoesResponse.data);
       } finally {
         setTimeout(() => {
           setLoading(false);
@@ -112,10 +113,10 @@ const AdminUpdateOrder = () => {
       setTitle(response.data.message);
       setDescription("");
     } catch (error) {
-      console.log("🚀 ~ handleSubmit ~ error:", error.response.data.message);
+      console.log("🚀 ~ handleSubmit ~ error:", error.response.data);
       setStatus("failed");
       setTitle("Update shoes failed!");
-      setDescription(error.response.data.message);
+      setDescription(error.response.data.error);
     } finally {
       setTimeout(() => {
         setLoading(false);

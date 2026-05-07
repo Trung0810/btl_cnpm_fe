@@ -20,7 +20,7 @@ const ShoesInfor = () => {
 
         setData(response.data.data);
       } catch (error) {
-        console.log(error);
+        console.log("🚀 ~ fetchData ~ error:", error.response.data);
       } finally {
         setLoading(false);
       }

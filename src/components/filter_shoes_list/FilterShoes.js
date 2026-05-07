@@ -19,7 +19,7 @@ const FilterShoes = ({ params }) => {
 
         setData(response.data.data);
       } catch (error) {
-        console.log("🚀 ~ fetchData ~ error:", error);
+        console.log("🚀 ~ fetchData ~ error:", error.response.data);
       }
     };
     fetchData();

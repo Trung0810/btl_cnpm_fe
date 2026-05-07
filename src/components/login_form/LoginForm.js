@@ -55,7 +55,7 @@ const LoginForm = () => {
       setDescription("Happy shopping!");
       setShowPopup(true);
     } catch (error) {
-      console.log("🚀 ~ submit ~ error:", error);
+      console.log("🚀 ~ submit ~ error:", error.response.data);
       setStatus("failed");
       setTitle("Login failed!");
       setDescription(error.response.data.error);

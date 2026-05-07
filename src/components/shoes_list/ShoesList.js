@@ -30,7 +30,7 @@ const ShoesList = ({ title, criteria, sort }) => {
 
         setData(response.data.data);
       } catch (error) {
-        console.log("🚀 ~ fetchData ~ error:", error);
+        console.log("🚀 ~ fetchData ~ error:", error.response.data);
       } finally {
         setTimeout(() => {
           setLoading(false);
